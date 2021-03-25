@@ -5,7 +5,9 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: 'JAML Chat App',
+  },
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
