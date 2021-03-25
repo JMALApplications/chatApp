@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'JAML Chat App',
+    title: 'JMAL Chat App',
   },
   plugins: [
     'gatsby-plugin-image',
