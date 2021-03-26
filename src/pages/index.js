@@ -1,29 +1,11 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Header from "../components/header/header";
-import HomeSlider from "../components/home-slider/home-slider";
-import Footer from "../components/footer/footer";
+import React from "react"
+import HomeSlider from "../components/home-slider/home-slider"
+import Layout from "../components/layout/layout"
 
-export default function Home({data}) {
+export default function Home() {
   return (
-
-    <div>
-
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <Layout>
       <HomeSlider />
-      <Footer siteTitle={data.site.siteMetadata.title} />
-
-    </div>
-    
-  );
+    </Layout>
+  )
 }
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
