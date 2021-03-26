@@ -12,8 +12,8 @@ const Footer = ({siteTitle}) => {
 
             <nav className="block p-5 w-50">
 
-                <Link href="/" className="pr-10">{siteTitle}</Link>
-                <Link href="/about">About</Link>
+                <Link to="/" className="pr-10">{siteTitle}</Link>
+                <Link to="/about">About</Link>
 
             </nav>
 
