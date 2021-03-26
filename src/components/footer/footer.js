@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const Footer = ({ siteTitle }) => {
   return (
-    <footer className="fixed w-100  bottom-0 w-full text-center">
+    <footer className="w-full text-center">
       <hr className="w-6/12 bg-gray-500 m-auto" />
 
       <nav className="block p-5 w-50">
