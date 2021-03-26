@@ -18,8 +18,8 @@ const Layout = props => {
       render={data => (
         <div>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <Footer siteTitle={data.site.siteMetadata.title} />
           {props.children}
+          <Footer siteTitle={data.site.siteMetadata.title} />
         </div>
       )}
     />
