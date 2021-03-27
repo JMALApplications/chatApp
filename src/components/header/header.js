@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => (
-  <header className="sticky top-0 bg-purple-900 text-white">
+  <header className="sticky top-0 bg-purple-900 text-white z-50">
     <nav className="block p-5">
       <Link to="/" className="float-left pr-10">
         {siteTitle}
