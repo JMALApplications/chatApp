@@ -4,6 +4,7 @@ import Footer from "../footer/footer"
 import { graphql, StaticQuery } from "gatsby"
 
 const Layout = props => {
+  document.body.classList.add('overflow-auto');
   return (
     <StaticQuery
       query={graphql`
@@ -18,8 +19,8 @@ const Layout = props => {
       render={data => (
         <div>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <Footer siteTitle={data.site.siteMetadata.title} />
           {props.children}
+          <Footer siteTitle={data.site.siteMetadata.title} />
         </div>
       )}
     />
