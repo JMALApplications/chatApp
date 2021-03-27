@@ -7,10 +7,10 @@ const Footer = ({ siteTitle }) => {
       <hr className="w-6/12 bg-gray-500 m-auto" />
 
       <nav className="block p-5 w-50">
-        <Link to="/" className="pr-10">
+        <Link to="/" activeClassName="underline" className="pr-10 hover:text-gray-700">
           {siteTitle}
         </Link>
-        <Link to="/about">About</Link>
+        <Link activeClassName="underline" className="hover:text-gray-700" to="/about">About</Link>
       </nav>
     </footer>
   )
