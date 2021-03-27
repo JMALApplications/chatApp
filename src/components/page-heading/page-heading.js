@@ -4,7 +4,7 @@ const getPageHeadingClassList = (mobileOnly) => {
 
     const baseClassList = "container bg-purple-900 text-white text-center mx-auto px-10 pt-20 pb-20";
 
-    return (mobileOnly == true) ? baseClassList + " block md:hidden" : baseClassList; 
+    return (mobileOnly === true) ? baseClassList + " block md:hidden" : baseClassList; 
 
 }
 
