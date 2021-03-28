@@ -9,11 +9,11 @@ const Header = ({ siteTitle }) => (
       <div className="grid grid-cols-8 md:inline-block">
         <div>
           <StaticImage 
-              src="../../assets/images/menu-icon.svg" 
-              alt="menu icon"
-              className="md:hidden"
-              style={{maxWidth: "30px"}}
-            />
+            src="../../assets/images/menu-icon.svg" 
+            alt="menu icon"
+            className="md:hidden"
+            style={{maxWidth: "30px"}}
+          />
         </div>
         <div className="text-center mx-auto md:m-auto col-span-6 md:inline-block">
           <Link to="/" className="md:text-left md:pr-10 text-xl font-bold">
