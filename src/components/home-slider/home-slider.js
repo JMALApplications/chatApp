@@ -13,12 +13,14 @@ const slides = [
 
 const HomeSlider = () => {
   return (
-    <AliceCarousel
-      autoPlay
-      disableButtonsControls
-      disableDotsControls
-      items={slides}
-    />
+    <div className="hidden md:block">
+      <AliceCarousel
+        autoPlay
+        disableButtonsControls
+        disableDotsControls
+        items={slides}
+      />
+    </div>
   )
 }
 

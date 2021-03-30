@@ -3,7 +3,12 @@ module.exports = {
 
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'width': 'width',
+        'opacity': 'opacity',
+      },
+    },
   },
   variants: {
     extend: {},
