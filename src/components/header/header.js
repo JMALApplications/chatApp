@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-
 const Header = ({ siteTitle }) => {
 
   const [menuOpen, setMenuOpen] = useState("false")
