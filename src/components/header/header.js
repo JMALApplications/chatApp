@@ -40,8 +40,8 @@ const Header = ({ siteTitle }) => {
             </Link>
           </div>
           <div className="hidden text-center col-span-6 md:inline-block md:m-auto text-lg">
-            <Link to="/" className="pr-5">Home</Link>
-            <Link to="/about">About</Link>
+            <Link to="/" activeClassName="border-b-2 border-white" className="mr-5">Home</Link>
+            <Link to="/about" activeClassName="border-b-2 border-white">About</Link>
           </div>
         </div>
       </nav>
@@ -56,8 +56,8 @@ const Header = ({ siteTitle }) => {
         &#88;
         </button>
         <nav className="p-5">
-          <Link to="/" className="text-lg flex p-2">Home</Link>
-          <Link to="/about" className="text-lg flex p-2 mt-3">About</Link>
+          <Link to="/" activeClassName="font-bold" className="text-lg flex p-2">Home</Link>
+          <Link to="/about" activeClassName="font-bold" className="text-lg flex p-2 mt-3">About</Link>
         </nav>
       </div>
     </header>
