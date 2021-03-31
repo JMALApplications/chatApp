@@ -6,14 +6,14 @@ const Header = ({ siteTitle }) => {
 
   const [menuOpen, setMenuOpen] = useState("false")
 
-  useEffect(() => {}, [])
+  useEffect(() => {}, [menuOpen])
 
   const slideOutMenuRef = useRef(false)
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen)
 
-    if (menuOpen === true) {
+    if (menuOpen) {
       slideOutMenuRef.current.classList.remove("-translate-x-full")
       slideOutMenuRef.current.classList.add("translate-x-0")
     } else {
