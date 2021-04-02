@@ -1,32 +1,32 @@
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import MobileMenu from "../mobile-menu/mobile-menu"
 
 const Header = ({ siteTitle }) => {
 
   const [menuOpen, setMenuOpen] = useState("false")
+  const [mobileMenuClassName, setMobileMenuClassName] = useState("mobile-menu transform -translate-x-full")
+  const [darkOverlayClassName, setDarkOverlayClassName] = useState("hidden")
 
-  useEffect(() => {}, [menuOpen])
-
-  const slideOutMenuRef = useRef(false)
+  useEffect(() => {}, [menuOpen, mobileMenuClassName, darkOverlayClassName])
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen)
+    let mobileMenuCss = (menuOpen) ? "mobile-menu transform translate-x-0" : "mobile-menu transform -translate-x-full"
+    setMobileMenuClassName(mobileMenuCss)
+  } 
 
-    if (menuOpen) {
-      slideOutMenuRef.current.classList.remove("-translate-x-full")
-      slideOutMenuRef.current.classList.add("translate-x-0")
-    } else {
-      slideOutMenuRef.current.classList.remove("translate-x-0")
-      slideOutMenuRef.current.classList.add("-translate-x-full")
-    }
+  const handleDarkOverlayToggle = () => {
+    let darkOverlayCss = (menuOpen) ? "mobile-menu--dark-overlay" : "hidden"
+    setDarkOverlayClassName(darkOverlayCss)
   }
 
   return (
     <header className="sticky top-0 bg-purple-900 text-white z-40">
       <nav className="container md:inline-block pt-5 pb-5 px-8 mx-auto">
         <div className="grid grid-cols-8 md:inline-block">
-          <button onClick={handleMenuToggle}>
+          <button onClick={() => {handleMenuToggle(); handleDarkOverlayToggle()}}>
             <StaticImage 
               src="../../assets/images/menu-icon.svg" 
               alt="menu icon"
@@ -45,21 +45,11 @@ const Header = ({ siteTitle }) => {
           </div>
         </div>
       </nav>
-      <div
-        ref={slideOutMenuRef}
-        className="fixed left-0 top-0 bg-purple-700 h-full z-40 transition-transform ease-in duration-300 w-5/6 transform -translate-x-full"
-      >
-        <button 
-          onClick={handleMenuToggle} 
-          className="float-right mt-3 mr-5 font-bold text-xl bg-purple-900 pt-1 pb-1 px-2"
-        >
-        &#88;
-        </button>
-        <nav className="p-5">
-          <Link to="/" activeClassName="font-bold" className="text-lg flex p-2">Home</Link>
-          <Link to="/about" activeClassName="font-bold" className="text-lg flex p-2 mt-3">About</Link>
-        </nav>
-      </div>
+      <MobileMenu 
+        onClick={() => {handleMenuToggle(); handleDarkOverlayToggle()}}
+        menuClassName={mobileMenuClassName}
+        darkOverlayClassName={darkOverlayClassName}
+      />
     </header>
   )
 }
