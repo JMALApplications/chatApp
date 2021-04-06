@@ -4,7 +4,9 @@ const ConversationsList = (props) => {
 
     return (
 
-        <ul></ul>
+        <ul>
+            {props.children}
+        </ul>
 
     )
 
