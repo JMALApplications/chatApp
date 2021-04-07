@@ -2,7 +2,7 @@ import React from "react"
 import { AiOutlineSearch } from "@react-icons/all-files/Ai/AiOutlineSearch"
 
 
-const ConversationsSearchBar = (props) => {
+const ConversationsNavSearchBar = (props) => {
 
     return (
 
@@ -25,4 +25,4 @@ const ConversationsSearchBar = (props) => {
 
 }
 
-export default ConversationsSearchBar
+export default ConversationsNavSearchBar

@@ -1,6 +1,6 @@
 import React from "react"
 
-const ConversationsContainer = (props) => {
+const ConversationsNavContainer = (props) => {
 
     return (
 
@@ -12,4 +12,4 @@ const ConversationsContainer = (props) => {
 
 }
 
-export default ConversationsContainer
+export default ConversationsNavContainer

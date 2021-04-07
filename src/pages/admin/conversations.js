@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import ConversationsContainer from "../../components/admin/conversations/conversations-container"
-import ConversationsItem from "../../components/admin/conversations/conversations-item"
-import ConversationsList from "../../components/admin/conversations/conversations-list"
-import ConversationsSearchBar from "../../components/admin/conversations/conversations-search-bar"
+import ConversationsNavContainer from "../../components/admin/conversations-nav/conversations-nav-container"
+import ConversationsNavItem from "../../components/admin/conversations-nav/conversations-nav-item"
+import ConversationsNavList from "../../components/admin/conversations-nav/conversations-nav-list"
+import ConversationsNavSearchBar from "../../components/admin/conversations-nav/conversations-nav-search-bar"
 
 const Conversations = () => {
 
@@ -31,13 +31,13 @@ const Conversations = () => {
 
     return (
 
-        <ConversationsContainer>
-            <ConversationsSearchBar 
+        <ConversationsNavContainer>
+            <ConversationsNavSearchBar 
                 changed={(event) => {
                     setConversationsSearchTerm(event.target.value)
                 }}
             />
-            <ConversationsList>
+            <ConversationsNavList>
                 {testData.filter((val) => {
                     if (conversationsSearchTerm === "") {
                         return val
@@ -48,7 +48,7 @@ const Conversations = () => {
                     }
                 }).map((val, key) => {
                     return (
-                        <ConversationsItem
+                        <ConversationsNavItem
                             conversationUrl={val.conversationUrl}
                             visitorId={val.visitorId}
                             conversationDate={val.conversationData}
@@ -57,8 +57,8 @@ const Conversations = () => {
                         />
                     ) 
                 })}
-            </ConversationsList>
-        </ConversationsContainer>
+            </ConversationsNavList>
+        </ConversationsNavContainer>
 
     )
 

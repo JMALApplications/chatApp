@@ -1,6 +1,6 @@
 import React from "react"
 
-const ConversationsList = (props) => {
+const ConversationsNavList = (props) => {
 
     return (
 
@@ -12,4 +12,4 @@ const ConversationsList = (props) => {
 
 }
 
-export default ConversationsList
+export default ConversationsNavList

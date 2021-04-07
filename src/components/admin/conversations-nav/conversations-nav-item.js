@@ -1,6 +1,6 @@
 import React from "react"
 
-const ConversationsItem = (props) => {
+const ConversationsNavItem = (props) => {
 
     return (
 
@@ -23,4 +23,4 @@ const ConversationsItem = (props) => {
 
 }
 
-export default ConversationsItem
+export default ConversationsNavItem
