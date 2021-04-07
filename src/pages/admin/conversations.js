@@ -1,8 +1,12 @@
 import React, { useState } from "react"
+import ChatContainer from "../../components/admin/chat/chat-container"
 import ConversationsNavContainer from "../../components/admin/conversations-nav/conversations-nav-container"
 import ConversationsNavItem from "../../components/admin/conversations-nav/conversations-nav-item"
 import ConversationsNavList from "../../components/admin/conversations-nav/conversations-nav-list"
 import ConversationsNavSearchBar from "../../components/admin/conversations-nav/conversations-nav-search-bar"
+import ConversationsProfileContainer from "../../components/admin/conversations-profile/conversations-profile-container"
+import ConversationsProfileHeader from "../../components/admin/conversations-profile/conversations-profile-header"
+import ConversationsProfileInfo from "../../components/admin/conversations-profile/conversations-profile-info"
 
 const Conversations = () => {
 
@@ -31,34 +35,53 @@ const Conversations = () => {
 
     return (
 
-        <ConversationsNavContainer>
-            <ConversationsNavSearchBar 
-                changed={(event) => {
-                    setConversationsSearchTerm(event.target.value)
-                }}
-            />
-            <ConversationsNavList>
-                {testData.filter((val) => {
-                    if (conversationsSearchTerm === "") {
-                        return val
-                    } else if (val.conversationLastMessage.toLowerCase().includes(conversationsSearchTerm.toLowerCase())) {
-                        return val
-                    } else {
-                        return null
-                    }
-                }).map((val, key) => {
-                    return (
-                        <ConversationsNavItem
-                            conversationUrl={val.conversationUrl}
-                            visitorId={val.visitorId}
-                            conversationDate={val.conversationData}
-                            conversationLastMessage={val.conversationLastMessage}
-                            key={key}
-                        />
-                    ) 
-                })}
-            </ConversationsNavList>
-        </ConversationsNavContainer>
+        <div className="flex">
+            <ConversationsNavContainer>
+                <ConversationsNavSearchBar 
+                    changed={(event) => {
+                        setConversationsSearchTerm(event.target.value)
+                    }}
+                />
+                <ConversationsNavList>
+                    {testData.filter((val) => {
+                        if (conversationsSearchTerm === "") {
+                            return val
+                        } else if (val.conversationLastMessage.toLowerCase().includes(conversationsSearchTerm.toLowerCase())) {
+                            return val
+                        } else {
+                            return null
+                        }
+                    }).map((val, key) => {
+                        return (
+                            <ConversationsNavItem
+                                conversationUrl={val.conversationUrl}
+                                visitorId={val.visitorId}
+                                conversationDate={val.conversationData}
+                                conversationLastMessage={val.conversationLastMessage}
+                                key={key}
+                            />
+                        ) 
+                    })}
+                </ConversationsNavList>
+            </ConversationsNavContainer>
+            <ChatContainer>
+
+            </ChatContainer>
+            <ConversationsProfileContainer>
+                <ConversationsProfileHeader
+                    visitorId="32353"
+                    visitorLocation="Pittsburgh, PA"
+                />
+                <ConversationsProfileInfo 
+                    visitorName="Bob"
+                    visitorEmail="testbob@gmail.com"
+                    visitorPhoneNumber="212-522-5555"
+                    visitorOS="Windows 10"
+                    visitorIP="111.111.1111"
+                />
+            </ConversationsProfileContainer>
+           
+        </div>
 
     )
 
