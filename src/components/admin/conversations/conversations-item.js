@@ -14,7 +14,7 @@ const ConversationsItem = (props) => {
                     <span>{props.conversationDate}</span>
                 </h4>
                 <div className="overflow-hidden flex">
-                    <p className="whitespace-no-wrap truncate">{props.conversationExcerpt}</p>
+                    <p className="whitespace-no-wrap truncate">{props.conversationLastMessage}</p>
                 </div>
             </a>
         </li>
