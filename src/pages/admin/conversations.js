@@ -2,12 +2,14 @@ import React from "react"
 import ConversationsContainer from "../../components/admin/conversations/conversations-container"
 import ConversationsItem from "../../components/admin/conversations/conversations-item"
 import ConversationsList from "../../components/admin/conversations/conversations-list"
+import ConversationsSearchBar from "../../components/admin/conversations/conversations-search-bar"
 
 const Conversations = () => {
 
     return (
 
         <ConversationsContainer>
+            <ConversationsSearchBar />
             <ConversationsList>
                 <ConversationsItem
                     conversationUrl="/admin/conversations/user-1"
