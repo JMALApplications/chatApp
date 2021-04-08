@@ -1,5 +1,8 @@
 import React, { useState } from "react"
 import ChatContainer from "../../components/admin/chat/chat-container"
+import ChatInput from "../../components/admin/chat/chat-input"
+import ChatLog from "../../components/admin/chat/chat-log/chat-log"
+import ChatLogMessage from "../../components/admin/chat/chat-log/chat-log-message"
 import ConversationsNavContainer from "../../components/admin/conversations-nav/conversations-nav-container"
 import ConversationsNavItem from "../../components/admin/conversations-nav/conversations-nav-item"
 import ConversationsNavList from "../../components/admin/conversations-nav/conversations-nav-list"
@@ -65,7 +68,21 @@ const Conversations = () => {
                 </ConversationsNavList>
             </ConversationsNavContainer>
             <ChatContainer>
-
+                <ChatLog>
+                    <ChatLogMessage 
+                        visitorId="32353"
+                        messageSentDate="4/8/2021"
+                        messageSentTime="5:06 PM"
+                        message="Hi there this is a test message for the purpose of testing"
+                    />
+                    <ChatLogMessage 
+                        visitorId="32353"
+                        messageSentDate="4/8/2021"
+                        messageSentTime="5:06 PM"
+                        message="Hi there this is another test message for the purpose of testing"
+                    />
+                </ChatLog>
+                <ChatInput />
             </ChatContainer>
             <ConversationsProfileContainer>
                 <ConversationsProfileHeader
