@@ -1,6 +1,4 @@
 import React from "react"
-import { AiOutlineSearch } from "@react-icons/all-files/Ai/AiOutlineSearch"
-
 
 const ConversationsNavSearchBar = (props) => {
 
@@ -16,7 +14,7 @@ const ConversationsNavSearchBar = (props) => {
                     onChange={props.changed}
                 />
                 <div className="absolute top-3 left-3 z-20">
-                    <AiOutlineSearch className="text-black text-lg font-bold" />
+                    {/** search icon */}
                 </div>
             </div>
         </div>
