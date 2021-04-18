@@ -5,13 +5,13 @@ module.exports = {
   theme: {
     extend: {
       transitionProperty: {
-        'width': 'width',
-        'opacity': 'opacity',
+        width: "width",
+        opacity: "opacity",
       },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 }

@@ -4,7 +4,7 @@ import Footer from "../footer/footer"
 import { graphql, StaticQuery } from "gatsby"
 
 const Layout = props => {
-  document.body.classList.add('overflow-auto');
+  //document.body.classList.add('overflow-auto');
   return (
     <StaticQuery
       query={graphql`

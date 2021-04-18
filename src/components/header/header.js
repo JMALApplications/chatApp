@@ -41,7 +41,9 @@ const Header = ({ siteTitle }) => {
           </div>
           <div className="hidden text-center col-span-6 md:inline-block md:m-auto text-lg">
             <Link to="/" activeClassName="border-b-2 border-white" className="mr-5">Home</Link>
+            
             <Link to="/about" activeClassName="border-b-2 border-white">About</Link>
+            
           </div>
         </div>
       </nav>
