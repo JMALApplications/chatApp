@@ -38,10 +38,9 @@ const Conversations = () => {
 
   return (
     <>
-      <div className="h-screen flex overflow-hidden bg-gray-100">
+      <div className="h-screen flex w-full">
         <SidePanel />
-
-        <div className="flex">
+        <div className="flex w-full">
           <ConversationsNavContainer>
             <ConversationsNavSearchBar
               changed={event => {
