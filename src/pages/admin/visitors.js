@@ -73,7 +73,7 @@ const Visitors = () => {
               </div>
             </div>
           </div>
-          <main className=" bg-red-100 flex-1 relative overflow-y-auto focus:outline-none">
+          <main className=" bg-purple-100 flex-1 relative overflow-y-auto focus:outline-none">
             <div className="py-6 ">
               <div className=" mx-auto px-4 sm:px-6 md:px-8">
                 <h1 className="text-2xl font-semibold text-gray-900">
