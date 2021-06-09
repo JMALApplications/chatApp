@@ -58,6 +58,9 @@ typings/
 .cache/
 public
 
+# testing pages
+src/pages/iframe/chat-box-test.js
+
 # Mac files
 .DS_Store
 
